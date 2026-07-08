@@ -21,7 +21,7 @@ class EventResource extends JsonResource
             'email' => $this->email,
             'event_date' => $this->event_date?->toDateString(),
             'logo_url' => $this->logoUrl(),
-            'cover_image' => 'http://localhost:8070/storage/'.$this->cover_image,
+            'cover_image' => 'https://moment-hub-app.jru5g2.easypanel.host/storage/'.$this->cover_image,
             'folders' => FolderResource::collection($this->whenLoaded('folders')),
         ];
     }
