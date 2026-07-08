@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "momenthub-docker",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "docker compose up && wait"],
+      "port": 8070
+    },
+    {
+      "name": "momenthub-debug",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "DB_HOST=127.0.0.1 DB_PORT=3322 REDIS_HOST=127.0.0.1 REDIS_PORT=6371 php artisan serve --port=8071"],
+      "port": 8071
+    }
+  ]
+}
